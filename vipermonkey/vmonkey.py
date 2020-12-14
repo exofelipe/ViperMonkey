@@ -256,7 +256,7 @@ def _read_doc_text_strings(data):
     """
 
     # Pull strings from doc.
-    str_list = re.findall("[^\x00-\x1F\x7F-\xFF]{4,}", data)
+    str_list = re.findall(b"[^\x00-\x1F\x7F-\xFF]{4,}", data)
     r = []
     for s in str_list:
         r.append(s)
